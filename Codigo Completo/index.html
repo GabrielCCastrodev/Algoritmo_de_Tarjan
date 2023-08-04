@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Tarjan</title>
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            /* overflow: hidden; */
+            background-image: linear-gradient(#ddd, #aaa);
+        }
+        header{
+            background-color: #ccc;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        main{
+            border: 1px solid black;
+            background-color: white;
+            padding: 5px;
+            height: 80%;
+            margin: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-start;
+            overflow-y: auto;
+            flex-wrap: wrap;
+        }
+        .vertice{
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+            background-color: #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            border: 1px solid #444444;
+            box-shadow: 1px 1px 4px 1px gray;
+        }
+        .vertice:hover{
+            background-color: #ccc;
+        }
+        [data-tooltip] {
+            position: relative;
+            cursor: pointer;
+        }
+        [data-tooltip]:hover::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            bottom: 100%;
+            left: 50%;
+            transform: translateY(150%);
+            white-space: pre-line;
+            width: 150px;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+        
+        [data-tooltip]:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button type="button" id="id_btnAdc">Adicionar Vértice</button>
+        <button type="button" id="id_MostrarVertices">Mostrar vértices</button>
+    </header>
+
+    <main id="id_main">
+        
+    </main>
+
+    <script src="tarjans.js"></script>
+</body>
+</html>
