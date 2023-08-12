@@ -87,6 +87,20 @@
             width: 100%;
             height: 10%;
         }
+        .balaoInfo{
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: 300px;
+            width: 300px;
+            background-color: rgb(168, 255, 224);
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            border: 2px solid rgb(81, 81, 81);  
+            border-radius: 15px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
@@ -102,6 +116,23 @@
     <main id="id_main">
 
     </main>
+
+    <aside class="balaoInfo" id="id_info">
+        <h1>Modo de Uso:</h1>
+        <p>Para utilizar o software e executar o algoritmo de Tarjan, siga as seguintes etapas:</p>
+
+        <h3>1. Adicionar Vértices:</h3>
+        <p>Clique no botão "Adicionar Vértice" para criar um novo vértice. Será solicitado que você informe a quais outros vértices este vértice irá apontar. Digite os números correspondentes aos vértices desejados e pressione a tecla "Enter". Para finalizar a adição de vértices, insira um caractere não numérico. Para adicionar mais vértices, clique novamente no botão, e o ID do vértice será incrementado automaticamente. Você também pode usar a tecla "Espaço" como atalho para esse botão.</p>
+
+        <h3>2. Botão "Deletar Vértice":</h3>
+        <p>Clique no botão "Deletar Vértice" e digite o ID do vértice que você deseja deletar. Se o vértice existir, ele será removido, caso contrário, você receberá uma mensagem informando que não há um vértice com o ID especificado.</p>
+
+        <h3>3. Botão "Algoritmo de Tarjan":</h3>
+        <p>Ao clicar no botão "Algoritmo de Tarjan", o algoritmo será executado com os vértices criados até o momento.</p>
+
+        <hr>
+        <p>Para reiniciar o código, basta recarregar a página (tecla: F5).</p>
+    </aside>
 
     <script src="tarjans.js"></script>
 </body>
