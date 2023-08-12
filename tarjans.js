@@ -226,3 +226,12 @@ function tarjan(grafo) {
     
     return gruposFortementeConectados; // Retorna os grupos fortemente conectados encontrados.
 }
+
+//Mostrar e ocultar o tutorial de utilização
+const info = document.getElementById("id_info");
+info.addEventListener("mouseleave", () => {
+    info.style.opacity = "0"
+});
+info.addEventListener("mouseover", () => {
+    info.style.opacity = "1"
+});
