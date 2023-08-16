@@ -15,7 +15,7 @@ function criarObj() {
     //variável para registrar para quais vértices o vértice atual(numId) irá apontar.
     let valoresAponta;
     //variável que recebe os valores de "valoresAponta" e registra temporariamente quais os vértices serão apontados.
-    let valores = []
+    let valores = [];
 
     // pegar os valores para qual o vértice irá apontar e guardar em valores enquanto o valor for igual a número.
     do {
@@ -30,7 +30,7 @@ function criarObj() {
         valores.push(parseInt(valoresAponta));
 
         //chamada da função para criação dos vértices apontados e/ou adicionar no atributo apontadoPor que é apontado pelo vértice de numId atual. 
-        apontarPara(valoresAponta)
+        apontarPara(valoresAponta);
         
     } while (true);
 
@@ -46,11 +46,11 @@ function criarObj() {
     
     //pegar os valores recebidos e registrar no vértice para quais vértices ele irá apontar.
     valores.forEach((valor, i) => {
-        vetorObjetos[numId].aponta.push(valores[i])
+        vetorObjetos[numId].aponta.push(valores[i]);
     });
     
     //atualiza na tela quais são os vértices criados.
-    mostrarVertices()
+    mostrarVertices();
     console.log(vetorObjetos);
     numId++;//acrescenta o numId para quando for criar o próximo vértice.
 }
@@ -230,8 +230,19 @@ function tarjan(grafo) {
 //Mostrar e ocultar o tutorial de utilização
 const info = document.getElementById("id_info");
 info.addEventListener("mouseleave", () => {
-    info.style.opacity = "0"
+    info.style.animation = "fecharMenu 1s cubic-bezier(.8,-0.40,.32,1.40)";
+    
+    setTimeout(() => {
+        info.style.opacity = "0.2";
+        info.style.width = "100px";
+        info.style.height = "100px";
+    },1000);
 });
 info.addEventListener("mouseover", () => {
-    info.style.opacity = "1"
+    info.style.animation = "abrirMenu 1s cubic-bezier(.8,-0.40,.32,1.40)";
+    setTimeout(() => {
+        info.style.opacity = "1";
+        info.style.width = "300px";
+        info.style.height = "300px";
+    },1000)
 });
